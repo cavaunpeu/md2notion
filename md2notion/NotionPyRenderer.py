@@ -196,7 +196,7 @@ class NotionPyRenderer(BaseRenderer):
             return {
                 'type': CodeBlock,
                 'language': matchLang,
-                'title_plaintext': blockStr
+                'title_plaintext': blockStr.strip("\n")
             }
         return self.renderMultipleToStringAndCombine(token.children, blockFunc)
 
